@@ -1,0 +1,228 @@
+{
+  "id": "bb843f67-f902-4232-9928-7efd5119ea2d",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.organizations": {
+      "name": "organizations",
+      "schema": "",
+      "columns": {
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "shortCode": {
+          "name": "shortCode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "shortCodeKey": {
+          "name": "shortCodeKey",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "createdOn": {
+          "name": "createdOn",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        },
+        "createdBy": {
+          "name": "createdBy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updatedOn": {
+          "name": "updatedOn",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updatedby": {
+          "name": "updatedby",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "orgId": {
+          "name": "orgId",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.organizationUsers": {
+      "name": "organizationUsers",
+      "schema": "",
+      "columns": {
+        "organizationId": {
+          "name": "organizationId",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "userName": {
+          "name": "userName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "isDefault": {
+          "name": "isDefault",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "createdOn": {
+          "name": "createdOn",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        },
+        "createdBy": {
+          "name": "createdBy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updatedOn": {
+          "name": "updatedOn",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updatedby": {
+          "name": "updatedby",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "orgId": {
+          "name": "orgId",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "userName": {
+          "name": "userName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mobileNumber": {
+          "name": "mobileNumber",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password": {
+          "name": "password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "userType": {
+          "name": "userType",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "createdOn": {
+          "name": "createdOn",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        },
+        "createdBy": {
+          "name": "createdBy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updatedOn": {
+          "name": "updatedOn",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updatedby": {
+          "name": "updatedby",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "orgId": {
+          "name": "orgId",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
